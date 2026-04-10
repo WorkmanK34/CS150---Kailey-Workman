@@ -1,0 +1,44 @@
+Kailey Workman & Marco Vázquez
+CS 150 
+Group Programming Project 1
+  Mastermind is a two-player code-breaking game invented in 1970. 
+The original game involved a sequence of four coloured pegs which would 
+be arranged in secret by the Codemaker and deduced by the Codebreaker. 
+This is a single player, number-based version of the game. The system 
+generates a random four-digit number and the user inputs a four-digit guess. 
+The program returns the number of digits that are correct but incorrectly 
+placed and those that are correct and correctly placed. The user use this 
+feedback to solve the systems generated code in 10 moves or less. 
+  To use the user must simply enter their first four-digit guess. Once they 
+guess correctly, or run out of moves, then can decide to play again or 
+terminate the program. A running tally of wins and loses is kept between 
+rounds. 
+	We created a SequenceGenerator class with a generate() method to produce 
+the secret code. The UserGuess class contains the input_guess() method that 
+takes the users input and validates that it is four digits and that they are 
+all integer values. Several data types were used in the program. Integers 
+were used for counters for wins, losses, and guesses while strings were used 
+to take user input and for validation of correct input. Boolean variables 
+controlled the flow of the game like whether the user was out of turns or 
+had guessed the code correctly. The primary data type for storage was lists.
+Lists were used since they preserve order which allowed for position-based 
+comparison. The special value None was used to mark out digits that had
+already been matched to avoid over counting correct digits. 
+   The code utilizes the standard ‘random’ library and the contained randint
+function to generate the four digits of the system generated number. Other 
+built-in functions like isdigit() were used for user input validation. 
+Custom exception classes were defined to handle invalid input like non 
+numerical characters or too many characters. 
+	There are no issues we set out to solve that we were unable to do.
+However, it would have been cool to use more sophisticated print 
+statements to perhaps display the correct or incorrectly placed 
+numbers represented by colours like Wordle. Another addition we could 
+add is a difficulty parameter which could be used to change the amount
+of digits in the target number and allowed digits in the users guess. 
+For example if when we instantiate the target we did 
+target_sequence = SequenceGenerator(1) 
+it would generate a four digit number but
+target_sequence = SequenceGenerator(2) 
+would generate a five digit number. Since UserGuess is a child of 
+SequenceGenerator it would be easy to carry this new parameter and use it 
+to change the restrictions on the users input as well. 
