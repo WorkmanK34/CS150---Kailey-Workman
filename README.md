@@ -4,3 +4,5 @@ This is a repository for my projects and assignments in my CS150 course
 * Second Assignment: Creating A Basic Program
 * Third Assignment: Programming with Lists, Conditions, and Loops
 * Fourth Assingment: Programming with Loops and Dictionaries
+* Fifth Assingment: Programming with Sets, Functions, and Classes
+* Project 1: Mastermind (Number Version)
